@@ -58,6 +58,7 @@
 
         <iframe id="invisible" name="invisible" style="display: none"></iframe>
         <form
+          id="contact-form"
           action="https://hooks.zapier.com/hooks/catch/15390643/36qjk8o/"
           method="POST"
           enctype="multipart/form-data"
@@ -69,6 +70,7 @@
             id="fname"
             name="fname"
             placeholder="First Name"
+            required
           /><br />
           <label for="lname">Last Name:</label><br />
           <input
@@ -76,6 +78,8 @@
             id="lname"
             name="lname"
             placeholder="Last Name"
+            required
+
           /><br />
           <label for="email">Email Address:</label><br />
           <input
@@ -83,6 +87,8 @@
             id="email"
             name="email"
             placeholder="me@example.com"
+            required
+            pattern="[a-z0-9]+@[a-z]+\.[a-z]{2,3}"
           /><br />
           <label for="phone">Phone Number:</label><br />
           <input
@@ -90,12 +96,31 @@
             id="phone"
             name="phone"
             placeholder="555-555-1234"
+            required
+            pattern="\d{3}-\d{3}-\d{4}"
           /><br />
-          <button type="submit">Submit</button>
+          <input id="submit" type="submit" value="Submit">
+          <div class="submit-success">
+            <p>Thank you for submitting your information!</p>
+          </div>
         </form>
       </div>
     </div>
 
-    <script></script>
+    <script>
+      const submitSuccess = document.querySelector(".submit-success");
+      const handleSubmit = async (e) => {
+        e.preventDefault();
+        let myForm = document.getElementById("contact-form");
+        let formData = new FormData(myForm);
+        const data = await fetch("https://hooks.zapier.com/hooks/catch/15390643/36qjk8o/", {
+          method: "GET",
+        })
+        if(data.status === 200) {
+          submitSuccess.style.display = 'block';
+        }
+      } 
+      document.querySelector("form").addEventListener("submit", handleSubmit);
+    </script>
   </body>
 </html>

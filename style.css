@@ -36,16 +36,15 @@ div {
 button {
   font-size: 20px;
   padding: .5vw 1vw;
-  margin: 10px;
   background-color: #95dcdeb6;
   box-shadow: 2px 2px 5px #04142350;
 }
 
-button:hover {
+button:hover, #submit:hover {
   background-color: #9cf1c636;
 }
 
-button:active {
+button:active, #submit:active {
   background-color: #184426ae
 }
 
@@ -60,13 +59,16 @@ form label {
 
 form input {
   align-self: center;
-  width: 10vw;
-  height: 2vw;
+  width: 15vw;
+  height: 3vw;
   background-color: #95dcde6c;
   box-shadow: 2px 2px 5px #04231d44;
 }
 
-form button {
+form #submit {
+  font-size: 20px;
+  padding: .5vw 1vw;
+  background-color: #95dcdeb6;
   align-self: center;
   width: 12vw;
   height: 6vh;
@@ -75,4 +77,12 @@ form button {
 
 ::placeholder {
   color: #1c4852;
+}
+
+.submit-success {
+  display: none;
+  margin-top: 0px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #021310;
 }
