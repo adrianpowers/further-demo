@@ -51,22 +51,43 @@
     <button class="analytics-btn">Send to Google Analytics</button>
 
     <h2>Task Two:</h2>
-    <form action="https://hooks.zapier.com/hooks/catch/15390643/36qjk8o/silent" method="POST">
-      <label for="fname">First Name:</label><br>
-      <input type="text" id="fname" name="fname" placeholder="First Name"><br>
-      <label for="lname">Last Name:</label><br>
-      <input type="text" id="lname" name="lname" placeholder="Last Name"><br>
-      <label for="email">Email Address:</label><br>
-      <input type="email" id="email" name="email" placeholder="me@example.com"><br>
-      <label for="phone">Phone Number:</label><br>
-      <input type="tel" id="phone" name="phone" placeholder="555-555-1234"><br>
+    <form
+      action="https://hooks.zapier.com/hooks/catch/15390643/36qjk8o/"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+      <label for="fname">First Name:</label><br />
+      <input
+        type="text"
+        id="fname"
+        name="fname"
+        placeholder="First Name"
+      /><br />
+      <label for="lname">Last Name:</label><br />
+      <input
+        type="text"
+        id="lname"
+        name="lname"
+        placeholder="Last Name"
+      /><br />
+      <label for="email">Email Address:</label><br />
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="me@example.com"
+      /><br />
+      <label for="phone">Phone Number:</label><br />
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="555-555-1234"
+      /><br />
       <button type="submit">Submit</button>
     </form>
 
     <script>
-      function submit() {
-        console.log()
-      }
     </script>
   </body>
 </html>
