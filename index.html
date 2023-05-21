@@ -45,49 +45,57 @@
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <h1>Title</h1>
+    <h1>Further - Integration Specialist</h1>
+    <h2>HTML5, CSS, GTM / GA4, Zapier Demonstration</h2>
 
-    <h2>Task One:</h2>
-    <button class="analytics-btn">Send to Google Analytics</button>
+    <div class="container">
+      <div>
+        <h2>Task One:</h2>
+        <button class="analytics-btn">Send to Google Analytics</button>
+      </div>
+      <div>
+        <h2>Task Two:</h2>
 
-    <h2>Task Two:</h2>
-    <form
-      action="https://hooks.zapier.com/hooks/catch/15390643/36qjk8o/"
-      method="POST"
-      enctype="multipart/form-data"
-    >
-      <label for="fname">First Name:</label><br />
-      <input
-        type="text"
-        id="fname"
-        name="fname"
-        placeholder="First Name"
-      /><br />
-      <label for="lname">Last Name:</label><br />
-      <input
-        type="text"
-        id="lname"
-        name="lname"
-        placeholder="Last Name"
-      /><br />
-      <label for="email">Email Address:</label><br />
-      <input
-        type="email"
-        id="email"
-        name="email"
-        placeholder="me@example.com"
-      /><br />
-      <label for="phone">Phone Number:</label><br />
-      <input
-        type="tel"
-        id="phone"
-        name="phone"
-        placeholder="555-555-1234"
-      /><br />
-      <button type="submit">Submit</button>
-    </form>
+        <iframe id="invisible" name="invisible" style="display: none"></iframe>
+        <form
+          action="https://hooks.zapier.com/hooks/catch/15390643/36qjk8o/"
+          method="POST"
+          enctype="multipart/form-data"
+          target="invisible"
+        >
+          <label for="fname">First Name:</label><br />
+          <input
+            type="text"
+            id="fname"
+            name="fname"
+            placeholder="First Name"
+          /><br />
+          <label for="lname">Last Name:</label><br />
+          <input
+            type="text"
+            id="lname"
+            name="lname"
+            placeholder="Last Name"
+          /><br />
+          <label for="email">Email Address:</label><br />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="me@example.com"
+          /><br />
+          <label for="phone">Phone Number:</label><br />
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="555-555-1234"
+          /><br />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
 
-    <script>
-    </script>
+    <script></script>
   </body>
 </html>
