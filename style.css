@@ -79,7 +79,7 @@ form #submit {
   color: #1c4852;
 }
 
-.submit-success {
+.submit-success, .ga4-success {
   display: none;
   margin-top: 0px;
   font-size: 20px;

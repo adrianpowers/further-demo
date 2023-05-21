@@ -51,7 +51,10 @@
     <div class="container">
       <div>
         <h2>Task One:</h2>
-        <button class="analytics-btn">Send to Google Analytics</button>
+        <button id="ga4button" class="analytics-btn">Send to Google Analytics</button>
+        <div class="ga4-success">
+          <p>Thank you for submitting your information!</p>
+        </div>
       </div>
       <div>
         <h2>Task Two:</h2>
@@ -79,7 +82,6 @@
             name="lname"
             placeholder="Last Name"
             required
-
           /><br />
           <label for="email">Email Address:</label><br />
           <input
@@ -99,7 +101,7 @@
             required
             pattern="\d{3}-\d{3}-\d{4}"
           /><br />
-          <input id="submit" type="submit" value="Submit">
+          <input id="submit" type="submit" value="Submit" />
           <div class="submit-success">
             <p>Thank you for submitting your information!</p>
           </div>
@@ -108,19 +110,16 @@
     </div>
 
     <script>
+      const ga4button = document.getElementById("ga4button");
+      ga4button.addEventListener('click', () => {
+        alert("Click sent to Google Analytics! Your info may take a few seconds to show up in the realtime viewer.")
+      })
+
       const submitSuccess = document.querySelector(".submit-success");
-      const handleSubmit = async (e) => {
-        e.preventDefault();
-        let myForm = document.getElementById("contact-form");
-        let formData = new FormData(myForm);
-        const data = await fetch("https://hooks.zapier.com/hooks/catch/15390643/36qjk8o/", {
-          method: "GET",
-        })
-        if(data.status === 200) {
-          submitSuccess.style.display = 'block';
-        }
-      } 
-      document.querySelector("form").addEventListener("submit", handleSubmit);
+      const formSubmitBtn = document.getElementById("submit");
+      formSubmitBtn.addEventListener("click", () => {
+        submitSuccess.style.display = "block";
+      })
     </script>
   </body>
 </html>
